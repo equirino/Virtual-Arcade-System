@@ -6,6 +6,7 @@
 #include "Config.h"
 #include <stdio.h>
 #include "RootNode.h"
+#include "TetrisNode.h"
 
 // declaring pointer to objects that main needs, initialize to null
 // these objects are created in main because they are needed for the outermost loop
@@ -68,7 +69,7 @@ int main(int argc, char* argv[])
 	else
 	{
 		bool quit = false;
-		RootNode currentNode(arcadeSystemRenderer, nullptr);
+		TetrisNode currentNode(arcadeSystemRenderer, nullptr);
 		while (!quit)
 		{	
 			// handle events on queue until empty

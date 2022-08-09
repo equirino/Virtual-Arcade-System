@@ -35,14 +35,14 @@ public:
         screen2->addTextureToScreen(screen2Text);
  
         // make a text button to put on the screen1
-        SimpleButton* button1 = createSimpleTextButton(renderer_in, "fonts/pixel/classic.ttf", 30, "gotoscreen2", 255, 0, 0);
+        SimpleButton* button1 = createSimpleTextButton(renderer_in, "fonts/pixel/classic.ttf", 30, "Screen 2", 255, 0, 0);
         button1->setButtonPosition(windowWidth / 2 - button1->getWidth() / 2, screen1Text->getY() + screen1Text->getHeight() + 50);
 
         // give this button an action
         button1->setButtonAction(createAction(MOVE_SCREENS, screen2));
        
         // make a text button to put on the screen2
-        SimpleButton* button2 = createSimpleTextButton(renderer_in, "fonts/pixel/classic.ttf", 30, "gotoscreen1", 255, 0, 0);
+        SimpleButton* button2 = createSimpleTextButton(renderer_in, "fonts/pixel/classic.ttf", 30, "Screen 1", 255, 0, 0);
         button2->setButtonPosition(windowWidth / 2 - button2->getWidth() / 2, screen2Text->getY() + screen2Text->getHeight() + 50);
        
         // give this button an action       
@@ -60,3 +60,4 @@ public:
         this->setCurrentScreen(screen1);
     }
 };
+
