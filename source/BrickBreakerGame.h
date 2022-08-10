@@ -5,6 +5,8 @@
 
 #include "GameScreen.h"
 #include "Ball.h"
+#include "Paddle.h"
+#include "Brick.h"
 #include "Config.h"
 
 class BrickBreakerGame : public GameScreen
@@ -15,12 +17,19 @@ class BrickBreakerGame : public GameScreen
         void logic();
 
         void newGame();
-        
 
         void setBall(Ball* ball_in) {ball = ball_in;}
         Ball* getBall() {return ball;}
+
+        void setPaddle(Paddle* paddle_in) {paddle = paddle_in;}
+        Paddle* getPaddle() {return paddle;}
+
     private:
         Ball* ball;
+        Paddle* paddle;
+
+        bool hasHitPaddle;
+        int conseqHits;
 };
 
 #endif
